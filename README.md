@@ -23,11 +23,11 @@ contract entry {
 <html>
 <head>
 <meta charset="UTF-8">
-<title>{{ contract=0x00, value=totalSupply}}</title>
+<title>{{ contract=0x00, name=totalSupply }}</title>
 </head>
 
 <body>
-
+  <h1>{{ contract=0x00, name=totalSupply }}</h1>
 </body>
 
 </html>
