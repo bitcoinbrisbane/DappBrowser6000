@@ -23,7 +23,7 @@ contract entry {
 <html>
 <head>
 <meta charset="UTF-8">
-<title>{{ contract='0x00', value=totalSupply}}</title>
+<title>{{ contract=0x00, value=totalSupply}}</title>
 </head>
 
 <body>
