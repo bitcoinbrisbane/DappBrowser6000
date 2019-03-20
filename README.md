@@ -22,6 +22,11 @@ Say a user wants to build a web page to interface with their ERC20 token.  They 
 * Symbol
 * Total Supply
 
+Readonly functions are used within the
+
+* h tags
+* p tags
+
 The abi for the respective functions are:
 
 ### Name
