@@ -69,6 +69,7 @@ The abi for the respective functions are:
 
 ## Markup
 
+Read only tags:
 * Head tags:  contract
 
 ```
@@ -86,3 +87,8 @@ The abi for the respective functions are:
 
 </html>
 ```
+
+Input tags -> input functions
+
+
+Reading collections
