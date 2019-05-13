@@ -1,4 +1,4 @@
-# Fire Wolf
+# fireWolf
 
 ## Abstract
 Unlike the internet, where we have a set of clients browsers, we do not have a *real* DAPP Browser.  The goal of this project, is to mix html and etheruem smart contract abi files, so the browser can render th epage without the need to use `web3.js` etc.
