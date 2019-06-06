@@ -18,41 +18,54 @@ I like the engine `litehtml` and see they take bitcoin tips.  There is also a c#
 * Parse the markup into a DOM
 * Paint the markup
 
-
 ## Senarios
 The HTML is hosted on a tradtional web server.
 The HTML is stored on a IPFS node.
 
 ## Function tag
-This specification defines a new set of tags to be embedded in the mark up.  The browser will then interprate these and make the relavant contract calls.
+This specification defines a new set of tags to be embedded in the mark up.  The browser will then interprate these and make the relavant contract calls.  They can be can be thought of like `<form>` tags, where the elements within the form are POSTed back to the server.
 
-### Attributes
+### Function Attirbutes
 
+* Action or Contract
 * Name
-* Signature
+* Signature: The function signature
 * Hash
+
+### Function Elements
+* Type 
+* Index
 
 ### Functions
 Functions are the 
 
 ### Readonly functions
 * Functions that do not require an input, such as `totalSupply`.  These are transpiled into raw text.
+
+Eg:
+
+`<p><function name="totalSupply" signature="totalSupply()"/></p>`
+
 * Functions that require inputs
 
-### Writeable functions
+```
+<function action="0x00" name="balanceOf" signature="balanceOf(address _owner)" type="uint256">
+        <input name="_owner" type="address"/>
+</function>
+```
+### Writable
+
+When a function requires gas, the browser with render a dialog box confirming the amount of gas estimated to call the function.
 
 ### Payable
+
+When a function is payable, the browser with render a dialog box confirming the amount of ETH.
 
 ### Header values
 
 Header key
 `eth-network`
 
-### Function tags
-
-Fields and functions without inputs are represented with the function tag.  In solidity, functions can be either pure, view.
-
-`<function name="totalSupply"></function>`
 
 ## A worked ERC20 example.
 Say a user wants to build a web page to interface with their ERC20 token.  They may want to display some of the readonly properties such as
