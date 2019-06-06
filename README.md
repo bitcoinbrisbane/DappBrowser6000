@@ -15,7 +15,7 @@ I like the engine `litehtml` and see they take bitcoin tips.  There is also a c#
 
 ## Approach (Proxy)
 
-* Post the from to a NodeJS proxy
+* Post the from to a NodeJS proxy https://github.com/bitcoinbrisbane/fireWolfProxy
 * Parse the markup from the DOM using https://github.com/bitcoinbrisbane/node-html-parser
 * Transpile the required tags into HTML
 * Pass back the completed markup
@@ -24,12 +24,24 @@ I like the engine `litehtml` and see they take bitcoin tips.  There is also a c#
 The HTML is hosted on a tradtional web server.
 The HTML is stored on a IPFS node.
 
+## EVM tag
+
+Attributes
+* Height
+
+## Contract tag
+The contract tag contains the following attributes.
+
+* Address
+* Network (Default to Main)
+* Height (Default to latest)
+
 ## Function tag
 This specification defines a new set of tags to be embedded in the mark up.  The browser will then interprate these and make the relavant contract calls.  They can be can be thought of like `<form>` tags, where the elements within the form are POSTed back to the server.
 
 ### Function Attirbutes
 
-* Action or Contract
+* Action or Contract:  Specify the contract
 * Name
 * Signature: The function signature
 * Hash
