@@ -13,10 +13,12 @@ Some of the engines used are
 
 I like the engine `litehtml` and see they take bitcoin tips.  There is also a c# wrapper which could be helpful.
 
-## Approach
+## Approach (Proxy)
 
-* Parse the markup into a DOM
-* Paint the markup
+* Post the from to a NodeJS proxy
+* Parse the markup from the DOM using https://github.com/bitcoinbrisbane/node-html-parser
+* Transpile the required tags into HTML
+* Pass back the completed markup
 
 ## Senarios
 The HTML is hosted on a tradtional web server.
