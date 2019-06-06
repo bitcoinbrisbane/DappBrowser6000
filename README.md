@@ -1,15 +1,11 @@
 # fireWolf
 
 ## Abstract
-Unlike the internet, where we have a set of clients browsers, we do not have a *real* DAPP Browser.  The goal of this project, is to mix html and etheruem smart contract abi files, so the browser can render th epage without the need to use `web3.js` etc.
-
-A developer can simply add new tags to html markup
-
-* A repository smart contract to hold the contract address and html links
+Unlike the internet where we have a set of clients browsers that render standardise HTML markup we do not have a *real* DAPP browser.  The goal of this project is to define a set of new HTML tags that allow developers to write HTML style code and interface directly with Ethereum smart contracts.
 
 ## Browser Engines
 
-Browers work by:
+Browers work by the following process:
 
 Some of the engines used are
 * WebKit
@@ -27,45 +23,48 @@ I like the engine `litehtml` and see they take bitcoin tips.  There is also a c#
 The HTML is hosted on a tradtional web server.
 The HTML is stored on a IPFS node.
 
-## New tags
+## Function tag
+This specification defines a new set of tags to be embedded in the mark up.  The browser will then interprate these and make the relavant contract calls.
+
+### Attributes
+
+* Name
+* Signature
+* Hash
+
+### Functions
+Functions are the 
+
+### Readonly functions
+* Functions that do not require an input, such as `totalSupply`.  These are transpiled into raw text.
+* Functions that require inputs
+
+### Writeable functions
+
+### Payable
 
 ### Header values
 
-Note these could be stored in headers too.
-`<contract></contract>` 
-`<network></network>`
-
-or headers
-`x-contract`
-`x-network`
+Header key
+`eth-network`
 
 ### Function tags
 
 Fields and functions without inputs are represented with the function tag.  In solidity, functions can be either pure, view.
 
-`<function name="totalSupply">`
-
-## ETH Entry Contract
-
-The contract owner points to their ENS to this contract.
-
-```
-contract entry {
-  
-}
-```
+`<function name="totalSupply"></function>`
 
 ## A worked ERC20 example.
 Say a user wants to build a web page to interface with their ERC20 token.  They may want to display some of the readonly properties such as
 
-* Name (name)
-* Symbol (symbol)
-* Total Supply (totalSupply)
-
+* Name (field name)
+* Symbol (field symbol)
+* Total Supply (function totalSupply)
 
 Readonly functions are implmented with the function tag.  The default is return index 0.
 
-`<function name="totalSupply"></function>`
+`<p><function name="totalSupply" signature="totalSupply()"/></p>`
+
 
 The abi for the respective functions are:
 
@@ -107,10 +106,8 @@ The abi for the respective functions are:
     }
 ```
 
-## Markup
+## Exmaple Markup
 
-Read only tags:
-* Head tags:  contract
 
 ```
 <!DOCTYPE html>
@@ -128,12 +125,17 @@ Read only tags:
 </html>
 ```
 
-Input tags -> input functions
+## ETH Entry Contract
 
+The contract owner points to their ENS to this contract.
+```
+contract entry {
+  
+}
+```
 
-Reading collections
-
-## Engines
+## Reference
+### Engines
 https://ultralig.ht
 https://github.com/cefsharp/CefSharp
 https://github.com/PingmanTools/LiteHtmlSharp
