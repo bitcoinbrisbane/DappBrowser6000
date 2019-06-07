@@ -1,17 +1,7 @@
-# fireWolf
+# fireWolf 
 
 ## Abstract
-Unlike the internet where we have a set of clients browsers that render standardise HTML markup we do not have a *real* DAPP browser.  The goal of this project is to define a set of new HTML tags that allow developers to write HTML style code and interface directly with Ethereum smart contracts.
-
-## Browser Engines
-
-Browers work by the following process:
-
-Some of the engines used are
-* WebKit
-* Gecko
-
-I like the engine `litehtml` and see they take bitcoin tips.  There is also a c# wrapper which could be helpful.
+Unlike the internet where we have a set of clients browsers that render standardise HTML markup we do not have a *real* DAPP browser.  The goal of this project is to define a set of new HTML tags that allow developers to write HTML style code and interface directly with Ethereum smart contracts.  We call this standard EML (Etherum Markup Langauge).
 
 ## Approach (Proxy)
 
@@ -24,17 +14,34 @@ I like the engine `litehtml` and see they take bitcoin tips.  There is also a c#
 The HTML is hosted on a tradtional web server.
 The HTML is stored on a IPFS node.
 
-## EVM tag
+## Browser Engines
+
+Browers work by the following process: (insert image)
+
+Some of the engines used are
+* WebKit
+* Gecko
+
+I like the engine `litehtml` and see they take bitcoin tips.  There is also a c# wrapper which could be helpful.
+
+## ETH tag
 
 Attributes
-* Height
+* command (height, gasprice, protocolversion)
+
+Eg:
+
+```
+<p><eth command="height"/></p>
+```
 
 ## Contract tag
 The contract tag contains the following attributes.
 
-* Address
-* Network (Default to Main)
+* address
+* network (Default to Main)
 * Height (Default to latest)
+* ERC (If the contract adhears to an EIP)
 
 ## Function tag
 This specification defines a new set of tags to be embedded in the mark up.  The browser will then interprate these and make the relavant contract calls.  They can be can be thought of like `<form>` tags, where the elements within the form are POSTed back to the server.
