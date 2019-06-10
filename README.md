@@ -1,7 +1,7 @@
 # fireWolf 
 
 ## Abstract
-Unlike the internet where we have a set of clients browsers that render standardise HTML markup we do not have a *real* DAPP browser.  The goal of this project is to define a set of new HTML tags that allow developers to write HTML style code and interface directly with Ethereum smart contracts.  We call this standard EML (Etherum Markup Langauge).
+Unlike the internet where we have a set of clients browsers that render standardise HTML markup we do not have a *real* dAPP browser.  The goal of this project is to define a set of new HTML tags that allow developers to write HTML style code and interface directly with Ethereum smart contracts.  We call this standard EML (Etherum Markup Langauge).
 
 ## Approach (Proxy)
 
@@ -40,7 +40,7 @@ The contract tag contains the following attributes.
 
 * address
 * network (Default to Main)
-* Height (Default to latest)
+* height (Default to latest)
 * ERC (If the contract adhears to an EIP)
 
 ## Function tag
@@ -48,24 +48,29 @@ This specification defines a new set of tags to be embedded in the mark up.  The
 
 ### Function Attirbutes
 
-* Action or Contract:  Specify the contract
-* Name
-* Signature: The function signature
-* Hash
+* action or contract:  Specify the contract
+* name
+* signature: The function signature
+* hash:  Signature hash
 
 ### Function Elements
-* Type 
-* Index
+* type 
+* index
 
 ### Functions
 Functions are the 
 
-### Readonly functions
+### ReadOnly functions
 * Functions that do not require an input, such as `totalSupply`.  These are transpiled into raw text.
 
-Eg:
+Eg EML:
 
 `<p><function name="totalSupply" signature="totalSupply()"/></p>`
+
+Rendered HTML:
+
+`<p>1000</p>`
+
 
 * Functions that require inputs
 
@@ -86,6 +91,10 @@ When a function is payable, the browser with render a dialog box confirming the 
 
 Header key
 `eth-network`
+
+## Number type conversions
+* hex
+* decimal
 
 
 ## A worked ERC20 example.
