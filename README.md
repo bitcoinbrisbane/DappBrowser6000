@@ -1,9 +1,22 @@
 # fireWolf 
 
 ## Abstract
-Unlike the internet where we have a set of clients browsers that render standardise HTML markup we do not have a *real* dAPP browser.  The goal of this project is to define a set of new HTML tags that allow developers to write HTML style code and interface directly with Ethereum smart contracts.  We call this standard EML (Etherum Markup Langauge).
 
-## Approach (Proxy)
+When users want to "surf" the internet they use a client called a browser.  The browser creates requests to servers and renders the returned texted into visual "pages" we call webpages.
+
+To interact with the ethereum blockchain, standard web browsers such as Chrome use plugins like MetaMask to call the ethereum blockchain and 
+
+The goal of this project is to remove the burdern of users having to download plugins and bespoke dApps.  FireWolf aims to be the default etherum browser.
+
+## Project Goals
+* define a set of new HTML tags that allow developers to write HTML style code and interface directly with Ethereum smart contracts.  We call this standard EML (Etherum Markup Langauge).
+* write a cross platform browser that renders the above EML into pages
+
+## Approach / Architecure (Proxy)
+
+There are many other frameworks or templating engines / middlewares, such as Handlebars.  https://www.npmjs.com/package/handlebars
+
+### Local proxy server
 
 * Post the from to a NodeJS proxy https://github.com/bitcoinbrisbane/fireWolfProxy
 * Parse the markup from the DOM using https://github.com/bitcoinbrisbane/node-html-parser
@@ -14,15 +27,11 @@ Unlike the internet where we have a set of clients browsers that render standard
 The HTML is hosted on a tradtional web server.
 The HTML is stored on a IPFS node.
 
-## Browser Engines
-
-Browers work by the following process: (insert image)
-
-Some of the engines used are
-* WebKit
-* Gecko
-
-I like the engine `litehtml` and see they take bitcoin tips.  There is also a c# wrapper which could be helpful.
+## New Mime Types
+* ens://
+* eth://
+* contract://
+* token://
 
 ## ETH tag
 
@@ -173,7 +182,7 @@ The abi for the respective functions are:
 The contract owner points to their ENS to this contract.
 ```
 contract entry {
-  
+  address public ens;
 }
 ```
 
