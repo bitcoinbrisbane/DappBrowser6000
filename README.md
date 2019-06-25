@@ -69,9 +69,6 @@ This specification defines a new set of tags to be embedded in the mark up.  The
 * type 
 * index
 
-### Functions
-Functions are the 
-
 ### ReadOnly functions
 * Functions that do not require an input, such as `totalSupply`.  These are transpiled into raw text.
 
