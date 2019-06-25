@@ -11,6 +11,8 @@ The goal of this project is to remove the burdern of users having to download pl
 ## Project Goals
 * define a set of new HTML tags that allow developers to write HTML style code and interface directly with Ethereum smart contracts.  We call this standard EML (Etherum Markup Langauge).
 * write a cross platform browser that renders the above EML into pages
+* define an EIP for the EML
+* define an EIP for a proxy contract
 
 ## Approach / Architecure (Proxy)
 
@@ -23,7 +25,7 @@ There are many other frameworks or templating engines / middlewares, such as Han
 * Transpile the required tags into HTML
 * Pass back the completed markup
 
-## Senarios
+## Work flows
 The HTML is hosted on a tradtional web server.
 The HTML is stored on a IPFS node.
 
@@ -32,6 +34,7 @@ The HTML is stored on a IPFS node.
 * eth://
 * contract://
 * token://
+* ercx:// (Such as erc20://)
 
 ## ETH tag
 
