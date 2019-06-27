@@ -14,7 +14,7 @@ The goal of this project is to remove the burdern of users having to download pl
 * define an EIP for the EML
 * define an EIP for a proxy contract
 
-## Approach / Architecure (Proxy)
+## Approach / Architecture (Proxy)
 
 There are many other frameworks or templating engines / middlewares, such as Handlebars.  https://www.npmjs.com/package/handlebars
 
