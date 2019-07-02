@@ -1,4 +1,4 @@
-# fireWolf 
+# etherWolf 
 
 ## Abstract
 
