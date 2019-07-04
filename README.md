@@ -4,9 +4,9 @@
 
 When users want to "surf" the internet they use a client called a browser.  The browser creates requests to servers and renders the returned texted into visual "pages" we call webpages.
 
-To interact with the ethereum blockchain, standard web browsers such as Chrome use plugins like MetaMask to call the ethereum blockchain and 
+To interact with the ethereum blockchain via dApps, standard web browsers such as Chrome use plugins like MetaMask to call the ethereum blockchain.  Local javascript based apps like Augur are another why for users to interface with the ethereum blockchain, but creating bespoke apps per dApp is cumbersome.
 
-The goal of this project is to remove the burdern of users having to download plugins and bespoke dApps.  FireWolf aims to be the default etherum browser.
+The goal of this project is to remove the burdern of users having to download plugins and bespoke dApps.  etherWolf aims to be the default etherum browser.
 
 ## Project Goals
 * define a set of new HTML tags that allow developers to write HTML style code and interface directly with Ethereum smart contracts.  We call this standard EML (Etherum Markup Langauge).
