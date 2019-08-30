@@ -26,8 +26,8 @@ There are many other frameworks or templating engines / middlewares, such as Han
 * Pass back the completed markup
 
 ## Work flows
-The HTML is hosted on a tradtional web server.
-The HTML is stored on a IPFS node.
+The EML is hosted on a tradtional web server.
+The EML is stored on a IPFS node.
 
 ## New Mime Types
 * ens://
@@ -107,7 +107,7 @@ Header key
 
 
 ## A worked ERC20 example.
-Say a user wants to build a web page to interface with their ERC20 token.  They may want to display some of the readonly properties such as
+Say a user wants to build a web page to interface with their ERC20 token.  They may want to display some of the readonly properties such as:
 
 * Name (field name)
 * Symbol (field symbol)
